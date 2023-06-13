@@ -1,8 +1,8 @@
 const databaseConnection = require('./creation/singletonDatabaseConnection');
+const developer = require('./creation/prototype');
 const Singleton = require('./creation/singleton');
-const DeveloperFactory = require('./creation/factory');
 const DeveloperBuilder = require('./creation/builder');
-const { developer } = require('./creation/prototype');
+const DeveloperFactory = require('./creation/factory');
 const { Dev } = require('./creation/classPrototype');
 const { Observer } = require('./behavioral/observer');
 
@@ -37,6 +37,7 @@ executeCreationPatterns = () => {
         console.log('-------------------------');
         console.log('Prototype');
         const devOne = Object.create(developer);
+        devOne.language = 'Java';
         console.log(devOne.language);
 
         const devPrototypeOne = Dev();
