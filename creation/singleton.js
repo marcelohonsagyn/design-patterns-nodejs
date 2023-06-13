@@ -1,4 +1,4 @@
-//Singleton patter
+
 class DatabaseConnection {
 
     constructor() {
