@@ -44,8 +44,6 @@ executeCreationPatterns = () => {
 
         const devPrototypeTwo = Dev('Java', 'Senior', 5, true)
         console.log(devPrototypeTwo.language);
-
-
 }   
 
 executeBehavioralPatterns = () => {
