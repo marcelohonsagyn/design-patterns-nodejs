@@ -4,6 +4,7 @@ const DeveloperFactory = require('./creation/factory');
 const DeveloperBuilder = require('./creation/builder');
 const { developer } = require('./creation/prototype');
 const { Dev } = require('./creation/classPrototype');
+const { Observer } = require('./behavioral/observer');
 
 executeCreationPatterns = () => {
         console.log('-------------------------');
@@ -45,7 +46,23 @@ executeCreationPatterns = () => {
         console.log(devPrototypeTwo.language);
 
 
-    }   
+}   
+
+executeBehavioralPatterns = () => {
+        console.log('-------------------------');
+        console.log('Observer');
+            
+        const observer = new Observer();
+        // Create observers
+        const observerA = (data) => console.log(`Observer A: ${data}`);
+        const observerB = (data) => console.log(`Observer B: ${data}`);
+        // Subscribe to the observer
+        observer.subscribe(observerA);
+        observer.subscribe(observerB);
+        // Notify Observers of the change
+        observer.broadcast("Notifing observers");
+
+}
 
 executeCreationPatterns();
- 
+executeBehavioralPatterns();
